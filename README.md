@@ -18,6 +18,19 @@ To go further, we have developped a Python interface to interact with our C++ mo
 
 Colab : https://colab.research.google.com/github/water-fluxes/day-3-plant-scale-cplantbox/blob/main/1_cplantbox.ipynb
 
+To make a full plant, change 
+    # Create instance describing a root system
+    rs = pb.RootSystem()
+    path = "../../../modelparameter/rootsystem/"
+    name = "Zea_mays_1_Leitner_2010"
+
+by
+
+    # Open plant and root parameter from a file
+    rs = pb.Plant()
+    path = "../../../modelparameter/plant/"
+    name = "Triticum_aestivum_adapted_2021"
+
 ## MARSHAL hydraulic model
 
 MARSHAL takes to output of CPlantBox (the root architecture file) top compute the water flow in the system and compute macro properties
